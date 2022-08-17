@@ -10,7 +10,7 @@ version=1.1
 author=Alexandre HUMEAU, Emma CHAPUIS, Alex BAIET
 email=alexandre.humeau1@gmail.com, alex.baiet3@gmail.com
 
-about=Cette extension permet de créer et éditer une base de données BADASS dans QGIS.
+about=Cette extension permet la création d'un fichier de base de données spatiales au format SpatiaLite pour l'enregistrement des données archéologiques (Badass) à l'Inrap, accompagné d'un fichier de projet .QGZ pré-paramétré.
 
 tracker=https://github.com/alex-baiet/badass/issues
 repository=https://github.com/alex-baiet/badass
