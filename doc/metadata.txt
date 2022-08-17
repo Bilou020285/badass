@@ -5,12 +5,31 @@
 [general]
 name=BADASS
 qgisMinimumVersion=3.22
-description=Extension facilitant la création et édition d'un projet avec une base de données BADASS.
+description=Cette extension permet la création d'un fichier de base de données spatiales au format SpatiaLite pour l'enregistrement des données archéologiques (Badass) à l'Inrap, accompagné d'un fichier de projet .QGZ pré-paramétré.
 version=1.1
 author=Alexandre HUMEAU, Emma CHAPUIS, Alex BAIET
 email=alexandre.humeau1@gmail.com, alex.baiet3@gmail.com
 
-about=Cette extension permet de créer et éditer une base de données BADASS dans QGIS.
+about=Badass (Base archéologique de données spatiales et attributaires) est une base de données spatiales développées par Caroline Font, Thomas Guillemard, Florent Mercey et Christelle Seng de l'Institut national de recherches archéologiques préventives (Inrap). Cette base de données s'appuie, d'une part, sur la structuration institutionnelle des "Six Couches" de données spatiales issues des levers topographiques (développée à l'Inrap par le réseau des référents SIG piloté par Anne Moreau), d'autre part, sur un enregistrement archéologique classique articulé autour de la stratigraphie (Galinié, Randoin 1987).
+
+Cette extension permet de générer deux fichiers :
+- le fichier de base de données spatiales au format SpatiaLite (.sqlite)
+- le projet QGIS (.qgz) qui intègre les tables, les relations et des styles qui permettent l'utilisation d'interfaces de saisie des données attributaires sous forme de formulaires
+Deux extensions sont en cours de développement :
+- Badass of the Dead : permet l’ajout de tables, de thésuaurus et d’un mannequin pour la saisie et l’étude des données anthropologiques
+- House of Badass : permet l’ajout de tables et de thésuaurus pour la saisie et l’étude en archéologie sur le bâti
+La programmation de cette extension a été assurée par Alexandre Humeau, Emma Chapuis et Alex Baiet.
+
+---
+Badass (Archaeological spatial and attribute database) is a spatial database developed by Caroline Font, Thomas Guillemard, Florent Mercey and Christelle Seng of the Institut national de recherches archéologiques préventives (Inrap). This database is based, on the one hand, on the institutional structuring of the "Six Layers" of spatial data from topographic surveys (developed at Inrap by the network of GIS referents led by Anne Moreau), and on the other hand, on a classic archaeological record based on stratigraphy (Galinié, Randoin 1987).
+
+This extension makes it possible to generate two files:
+- the spatial database file in SpatiaLite format (.sqlite)
+- the QGIS project (.qgz) which integrates the tables, relations and styles which allow the use of interfaces for entering attribute data in the form of forms
+Two extensions are under development:
+- Badass of the Dead: allows the addition of tables, thesauri and a dummy for the entry and study of anthropological data
+- House of Badass: allows the addition of tables and thesauri for the capture and study of archaeological data on the building
+The programming of this extension was carried out by Alexandre Humeau, Emma Chapuis and Alex Baiet.
 
 tracker=https://github.com/alex-baiet/badass/issues
 repository=https://github.com/alex-baiet/badass
