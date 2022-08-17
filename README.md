@@ -25,7 +25,7 @@ Voici les différentes parties :
 
 Ce projet est un plugin QGIS commencé par **Alexandre HAMEAU** et **Emma CHAPUIS** en 2021 et continué par **Alex BAIET** (moi) en 2022.
 
-Alexandre HAMEAU et Emma CHAPUIS ont commencé le plugin durant leurs stages en ajoutant la création d'une base de données automatisée et en commençant la création de nombreuses interfaces d'édition de la base de données. A la fin de leur stages, le plugin n'était pas bien fonctionnel.
+Alexandre HAMEAU et Emma CHAPUIS ont commencé le plugin durant leurs stages en ajoutant la création d'une base de données automatisée et en commençant la création de nombreuses interfaces d'édition de la base de données. A la fin de leurs stages, et après plusieurs essais du plugin, une simplification des objectifs du plugin a été privilégiée. Désormais, les interfaces de QGIS natives permettent seules la navigation et la saisie des données. Le plugin ne permettrait que la création de la base de données spatialite et du projet QGIS.
 
 J'ai donc repris le projet et ai terminé ce plugin en juin 2022.
 
