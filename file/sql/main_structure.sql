@@ -1544,3 +1544,9 @@ WHERE r."REF_USanterieure" = r."REF_USposterieure"
 OR r."REF_USanterieure"||r."REF_USposterieure" = r."REF_USposterieure"||r."REF_USanterieure"
 OR s."REF_USsynchro1" = s."REF_USsynchro2";
 
+--Vue de récapitulation des US par log
+CREATE VIEW "vue_recap_us_log" AS 
+SELECT "numlog", GROUP_CONCAT("numus",', ') as recap_us 
+FROM j_us_log GROUP BY "numlog" 
+ORDER BY "numus";
+
