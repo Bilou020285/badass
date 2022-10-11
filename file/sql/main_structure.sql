@@ -126,7 +126,7 @@ AddGeometryColumn ('coupe_line','geometry',2154,'MULTILINESTRING','XY',0); -- mi
 -- La table coupe_poly
 DROP TABLE IF EXISTS coupe_poly;
 CREATE TABLE coupe_poly(
-   "id_poly" INTEGER PRIMARY KEY,
+   "id_cpoly" INTEGER PRIMARY KEY,
    "id_axe" INTEGER,
    "numfait" INTEGER,
    "numus" INTEGER,
@@ -1491,6 +1491,13 @@ FROM (select * from vue_j_rel_us_inverse order by "numus2")
 GROUP BY numus1
 ORDER BY numus1;
 
+--Vue de récapitulation des US par log stratigraphique
+CREATE VIEW "vue_recap_us_log" AS 
+SELECT "numlog", GROUP_CONCAT("numus",', ') as recap_us 
+FROM j_us_log 
+GROUP BY "numlog" 
+ORDER BY "numus"
+
 --Vue de récapitulation des tranchées, sondages, faits, us, log et iso par minute
 CREATE VIEW vue_recap_minute AS
 select m.*, m1."numinute", 
@@ -1532,9 +1539,9 @@ WHERE "typrel" IN ('sur', 'sous');
 
 -- Vue d'exportation de la table de relations stratigraphiques pour les relations horizontales. Manque le champ RelationIncertaine rempli par NULL ou '?'
 CREATE VIEW ExportSynchros AS
-SELECT DISTINCT CASE WHEN "typrel" IN ('égale','équivalente','synchrone') THEN "numus1" END AS REF_USsynchro1, CASE WHEN "typrel" IN ('égal','équivalent','synchrone') THEN "numus2" END AS REF_USsynchro2
+SELECT DISTINCT CASE WHEN "typrel" IN ('égal', 'équivalent','égale','équivalente','synchrone') THEN "numus1" END AS REF_USsynchro1, CASE WHEN "typrel" IN ('égal','équivalent','égale','équivalente','synchrone') THEN "numus2" END AS REF_USsynchro2
 FROM j_rel_us
-WHERE "typrel" IN ('égal','équivalent','synchrone');
+WHERE "typrel" IN ('égal','équivalent','égale','équivalente','synchrone');
 
 -- Vue de détection des erreurs d'écritures de relations stratigraphiques : sur une même US ou relations contradictoires 
 CREATE VIEW erreur_saisie_strati AS
